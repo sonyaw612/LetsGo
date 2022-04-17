@@ -47,12 +47,13 @@ class App extends React.Component {
           </Switch>
         </Router> */}
 
-        <Accounting />
+        {/* <Accounting /> */}
         {/* <EventCoord /> */}
         {/* <Logistics /> */}
         {/* <Management /> */}
         {/* <Marketing /> */}
         {/* <TechAdmin /> */}
+        {/* <SignInPage /> */}
       </div>
     );
   }
