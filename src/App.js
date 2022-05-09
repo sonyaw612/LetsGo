@@ -1,98 +1,70 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { 
-  BrowserRouter as Router, 
-  Routes, 
-  Route, 
-  Link,
-  Outlet,
-} from 'react-router-dom'; 
 import {
-  Navbar,
-  NavDropdown,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import {
   Nav,
-  Container,
+  // Navbar,
+  // NavDropdown,
+  // Container,
 } from 'react-bootstrap';
 // import { Navigation } from 'react-mdl';
 
 // ---------------------------------
-import SignInPage from './pages/SignInPage';
+// import SignInPage from './pages/SignInPage';
 import TechAdmin from './pages/TechAdmin';
 import Accounting from './pages/Accounting';
 import EventCoord from './pages/EventCoord';
 import Logistics from './pages/Logistics';
-import Management from './pages/Management';
 import Marketing from './pages/Marketing';
+import CompanyEvents from './pages/CompanyEvents';
+// import Management from './pages/Management';
 // ---------------------------------
 
-function Navigation(props) {
-  return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Home</Link>
-      <Link className="navbar-brand" to="/signin">Sign in</Link>
-      <Link className="navbar-brand" to="/techadmin">Tech Administrators</Link>
-      <Link className="navbar-brand" to="/accounting">Accountants</Link>
-      <Link className="navbar-brand" to="/eventcoord">Event Coordinators</Link>
-      <Link className="navbar-brand" to="/logistics">Logistics</Link>
-      <Link className="navbar-brand" to="/management">Management</Link>
-      <Link className="navbar-brand" to="/marketing">Marketing</Link>
-    </nav>
+function Home(){
+  return(
+    <div style={{ textAlign: 'center'}}><h1>Welcome to Let's Go Event Management Application!</h1></div>
   );
 }
 
-
 class App extends React.Component {
+
   render() {
     return (
-      <div class="container">
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Container>
-          <Navbar.Brand href="/">Let's Go Event Manager</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/signin">Sign-In</Nav.Link>
-              <Nav.Link href="/logout">Logout</Nav.Link>
-              <Nav.Link href="/aboutus">About Us</Nav.Link>
-              <Nav.Link href="/home">Home</Nav.Link>
-              <NavDropdown title="Departments" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="/eventcoord">Event Coordinators</NavDropdown.Item>
-                <NavDropdown.Item href="/accounting">Accounting</NavDropdown.Item>
-                <NavDropdown.Item href="/marketing">Marketing</NavDropdown.Item>
-                <NavDropdown.Item href="/logistics">Logistics</NavDropdown.Item>
-                <NavDropdown.Item href="/management">Management</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/techadmin">Tech Administration</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <div className="container">
 
-      {/* <Navigation />
-      <div>
-        <Routes>
-          <Route path = '/accounting' element = { Accounting } />
-          <Route path = '/eventcoord' element = { EventCoord } />
-          <Route path = '/logistics'  element = { Logistics } />
-          <Route path = '/management' element = { Management } />
-          <Route path = '/marketing'  element = { Marketing } /> 
-          <Route path = '/techadmin'  element = { TechAdmin } />
-          <Route path = '/signin'     element = { SignInPage } />
-        </Routes>
-      </div> */}
+        <div>
+          <Nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3" variant='pills'>
+            {/* <Link className="navbar-brand" to="/marketing">Marketing</Link> */}
 
-      <br />
-      <h3>This is the Let's Go Event Management Application.</h3>
+            <Nav.Item><Nav.Link href = '/'            eventKey = 'home'      >Home</                Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/events'      eventKey = 'events'    >Home</                Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/accounting'  eventKey = 'accounting'>Accounting</          Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/techadmin'   eventKey = 'techadmin' >Tech Administration</ Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/eventcoord'  eventKey = 'eventcoord'>Event Management</    Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/logistics'   eventKey = 'logistics' >Logistics</           Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/marketing'   eventKey = 'marketing' >Marketing</           Nav.Link></Nav.Item>
 
-        {/* <Accounting /> */}
-        {/* <EventCoord /> */}
-        {/* <Logistics /> */}
-        {/* <Management /> */}
-        {/* <Marketing /> */}
-        {/* <TechAdmin /> */}
-        {/* <SignInPage /> */}
+          </Nav>
+        </div>
+
+        <div>
+          <Router>
+            <Routes>
+                <Route path = "/"           element = {<Home/>}/>
+                <Route path = "/events"     element = {<CompanyEvents/>}/>
+                <Route path = "/accounting" element = {<Accounting/>}/>
+                <Route path = "/techadmin"  element = {<TechAdmin/>}/>
+                <Route path = "/eventcoord" element = {<EventCoord/>}/>
+                <Route path = "/logistics"  element = {<Logistics/>}/>
+                <Route path = "/marketing"  element = {<Marketing/>}/>
+            </Routes>
+          </Router>
+        </div>
 
       </div>
     );
@@ -100,3 +72,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+
