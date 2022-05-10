@@ -6,6 +6,7 @@ const { event } = require('../models/event')
 
 // get all events
 router.get('/', (req, res) => {
+    console.log("Received request")
     event.findAll({})
     .then((data) => {
         res.status(200).json(data)

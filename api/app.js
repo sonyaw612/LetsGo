@@ -3,8 +3,15 @@ const express = require('express');
 const path = require('path');
 // const db = require('./models');
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
+const cors = require("cors")
 
+app.use(
+  cors({
+    origin: "*",
+    // methods: ['GET', 'POST'],
+  })
+)
 
 // this lets us parse 'application/json' content in http requests
 app.use(express.json());

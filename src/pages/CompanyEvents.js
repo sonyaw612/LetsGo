@@ -4,32 +4,48 @@ import React from 'react';
 class SignInPage extends React.Component{
     state = {
         event:[],
-        listOfEvents:[]
+        listOfEvents:[],
+        numEvents: 0,
     };
     
     async componentDidMount(){
-        const url = "/api/event/";
+        const url = 'http://localhost:8080/api/event';
         try {
-            const response = await fetch(url, {
-                method: "GET"
-            }) .then(response => response.json())
-            .then(responseJson => {
-            console.log(responseJson);
-            console.log('--------------');
-            this.setState({event: responseJson});
-            console.log(this.state.event);
-            console.log("amount of event is " + this.state.event.length);
-         }) 
-        .then(() =>{
-            for(let i in this.state.event){
-                console.log(this.state.event[i]);
-                var joined = this.state.listOfEvents.concat(<EventCard card={this.state.event[i]}/>);
-                this.setState({ listOfEvents: joined });
-            }
-        });
-       } catch (err) {
-         console.error(err.message);
-       } 
+            await fetch(url) 
+            .then((res) => {
+                console.log("------> Received data . . . Converting to JSON <------");
+                console.log(res)
+                res.json();
+            })
+            .then((json) => {
+                if(json) {
+                    console.log("Data converted to JSON . . . Output:");
+                    console.log(json);
+                }
+                else{
+                    console.log("JSON data null.")
+                }
+
+                console.log("<------ End of Request ------>")
+
+                // console.log('--------------');
+                // this.setState({
+                //     event: responseJson,
+                //     numEvents: responseJson.length,
+                // });
+                // console.log(this.state.event);
+            })
+        // .then(() =>{
+        //     for(let i in this.state.event){
+        //         console.log(this.state.event[i]);
+        //         var joined = this.state.listOfEvents.concat(<EventCard card={this.state.event[i]}/>);
+        //         this.setState({ listOfEvents: joined });
+        //     }
+        // });
+        } catch (err) {
+            // console.error(err.message);
+            console.log("Error occured");
+        } 
     //    console.log("----------------")
     //    console.log(this.state.listOfEvents)
     };
@@ -37,7 +53,8 @@ class SignInPage extends React.Component{
     render(){
         return(
             <div style = {{ textAlign: 'center' }} >
-                <h1>Sign-in Page</h1>
+                <h1>List of Events</h1>
+                <p>Number of Events: {this.state.numEvents}</p>
             </div>
         );
     }

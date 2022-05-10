@@ -42,7 +42,7 @@ class App extends React.Component {
             {/* <Link className="navbar-brand" to="/marketing">Marketing</Link> */}
 
             <Nav.Item><Nav.Link href = '/'            eventKey = 'home'      >Home</                Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href = '/events'      eventKey = 'events'    >Home</                Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href = '/events'      eventKey = 'events'    >Events</                Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href = '/accounting'  eventKey = 'accounting'>Accounting</          Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href = '/techadmin'   eventKey = 'techadmin' >Tech Administration</ Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href = '/eventcoord'  eventKey = 'eventcoord'>Event Management</    Nav.Link></Nav.Item>
