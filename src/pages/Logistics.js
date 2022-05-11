@@ -10,8 +10,7 @@ class Logistics extends React.Component{
         return(
             <div style = {{ textAlign: 'center' }} >
             
-            <html>
-            
+           <html>
     <!-- This is the head of HTML-->
     <head>
         <title> Let'sGo - Logistics </title>
@@ -33,7 +32,7 @@ class Logistics extends React.Component{
         }
 
         tr:nth-child(even) {
-        background-color: #dddddd;
+        background-color: #000000;
         }
 
         </style>
@@ -64,16 +63,39 @@ this allowed the button to display a pop up window when clicked.-->
         <h2>List of Events</h2>
         <table>
             <tr>
-                <th> Name </th>
-                <th> Location </th>
-                <th> Time </th>
+                <th> <strong> Name </strong> </th>
+                <th> <strong> Location </strong> </th>
+                <th> <strong> Time </strong> </th>
 
+            <tr>
+                <th> Apple Forum </th>
+                <th> New York, NY 10001 </th>
+                <th> May 7th, 7:00PM </th>
             </tr>
 
             <tr>
-                <th> Event 1</th>
-                <th> New York, NY 10001</th>
-                <th> May 7th, 7:00PM</th>
+                <th> Microsoft Year Event </th>
+                <th> Queens, NY 11368 </th>
+                <th> May 10th, 5:00PM </th>
+            </tr>
+
+            <tr>
+                <th> Samsung Unboxing </th>
+                <th> Chicago, IL 60602 </th>
+                <th> May 12th, 2:00PM </th>
+            </tr>
+
+            <tr>
+                <th> J&J Department Feast </th>
+                <th> Los Angeles, CA 90016 </th>
+                <th> May 17th, 6:00PM </th>
+
+            </tr>
+
+            <tr> 
+                <th> Pfizer Showcase </th>
+                <th> Las Vegas, NV 89178 </th>
+                <th> May 21st, 12:00PM </th>
             </tr>
         </table>
 
@@ -107,13 +129,13 @@ this allowed the button to display a pop up window when clicked.-->
     <p>
         <table>
             <tr>
-                <th> Name </th>
-                <th> Category </th>
-                <th> Contact </th>
-                <th> Phone </th>
-                <th> Email </th>
-                <th> Address </th>
-                <th> City / State / ZIP </th>
+                <th> <strong> Name </strong> </th>
+                <th> <strong> Category </strong> </th>
+                <th> <strong> Contact </strong> </th>
+                <th> <strong> Phone </strong> </th>
+                <th> <strong> Email </strong> </th>
+                <th> <strong> Address </strong> </th>
+                <th> <strong> City / State / ZIP </strong> </th>
             
             </tr>
 
