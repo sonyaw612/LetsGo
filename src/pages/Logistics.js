@@ -99,15 +99,25 @@ this allowed the button to display a pop up window when clicked.-->
             </tr>
         </table>
 
+        <hr>
+        <hr>
+
+        <p> Issues with: </p>
+
+        <select style="width:200px">
+        <option> Choose an event </option>
+        </select>
         
+       
+
 <!-- This is the text box to write the issues with the event-->
         <p>
-            <label for="eventissues"> Issues with the events:</label>
+            
         </p>
 
         <textarea id="eventissues" name="eventissues" rows="4" cols="50">
             
-           Input any issues that the events are facing.
+           Input any issues that the event is facing.
 
         </textarea>
        
@@ -184,9 +194,6 @@ this allowed the button to display a pop up window when clicked.-->
             
         </table>
 <hr>
-        <button class="GFG" onclick=" window.location.href= '/Users/rafaelgrullon/Library/Containers/com.microsoft.Excel/Data/Desktop/Vendor List.xlsx';">
-            List of Vendors
-        </button>
     </p>
    
     
@@ -194,55 +201,6 @@ this allowed the button to display a pop up window when clicked.-->
 
 <a href="#" class="close-popup"></a>
 
-
-<!-- Progress Button -->
-   
-<a href="#Progress" class="btn"> Progress </a>
-        
-    <div id="Progress" class="popup">
-    <a href="#" class="close">&times;</a>
-    
-    <!-- This is the checkbox with : not started, started, and completed
-            This information will be below each event -->
-
-            <table>
-                <tr>
-                <th> Event </th>
-                </tr>
-
-                <tr>
-                    <th> This is an event [location] and [time]</th>
-                </tr>
-            </table>
-    <fieldset>
-        <Legend>
-            Status of event:
-        </Legend>
-
-        <div>
-            <input type="checkbox" id="notstarted" name="Event" checked>
-
-            <label for = "notstarted"> Not Started</label>
-        </div>
-
-        <div>
-        <input type="checkbox" id="started" name="Event" checked>
-
-            <label for = "started"> Started</label>
-        </div>
-
-        <div>
-            <input type="checkbox" id="completed" name="Event" checked>
-
-            <label for = "completed"> Completed</label>
-        </div>
-
-        <input type="submit" value = "Submit">
-    </fieldset>
-   
-
-</div>
-    <a href="#" class="close-popup"></a>
 
     </body>
 </html>
