@@ -95,6 +95,7 @@ class Marketing extends React.Component{
   </div>
 </div>
 <span class="slide__text">TECH EVENTS</span>
+<div><img src="https://user-images.githubusercontent.com/6562690/54934415-b4d25b80-4edb-11e9-8758-fb29ada50499.png" class="wrapper" width="1500" height="800" /></div>
             </div>
             
         );
