@@ -10,9 +10,9 @@ class Logistics extends React.Component{
         return(
             <div style = {{ textAlign: 'center' }} >
             
-           <html>
-    <!-- This is the head of HTML-->
-    <head>
+           
+    // This is the head of HTML
+    
         <title> Let'sGo - Logistics </title>
         <style>
             h1 {
@@ -37,25 +37,26 @@ class Logistics extends React.Component{
 
         </style>
 
-<!-- Below I linked the CSS file to this HTML file
-this allowed the button to display a pop up window when clicked.-->
+// Below I linked the CSS file to this HTML file this allowed the button to display a pop up window when clicked.
        
 <link href="/Users/rafaelgrullon/Desktop/html, body {.css" rel="stylesheet" type="text/css">
 
-    </head>
+    
 
-<!-- This is the body of HTML-->
+//This is the body of HTML
 
-    <body>
+    
    
-        <!-- Heading -->
+     // Heading 
+    
     <div>
        <h1> Logistics </h1>
    </div>
 
-<!-- ** TRYING TO CREATE A POP UP WINDOW **-->
+// TRYING TO CREATE A POP UP WINDOW 
 
-<!-- Events Button -->
+// Events Button 
+
 <a href="#Events" class="btn"> Events </a>
   
   <div id="Events" class="popup">
@@ -110,7 +111,8 @@ this allowed the button to display a pop up window when clicked.-->
         
        
 
-<!-- This is the text box to write the issues with the event-->
+// This is the text box to write the issues with the event
+
         <p>
             
         </p>
@@ -130,7 +132,7 @@ this allowed the button to display a pop up window when clicked.-->
 
     <a href="#" class="close-popup"></a>
 
-<!-- Vendors Button-->
+// Vendors Button
 
     <a href="#popup" class="btn"> Vendors</a>
     
@@ -202,8 +204,8 @@ this allowed the button to display a pop up window when clicked.-->
 <a href="#" class="close-popup"></a>
 
 
-    </body>
-</html>
+   
+
             </div>
         );
     }
