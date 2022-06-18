@@ -41,6 +41,7 @@ class App extends React.Component {
           <Nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3" variant='pills'>
             {/* <Link className="navbar-brand" to="/marketing">Marketing</Link> */}
 
+            <Nav.Item><Nav.Link href = '/'            eventKey = 'home'      style ={{ color: "#212529" }}>Hom</                Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href = '/'            eventKey = 'home'      >Home</                Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href = '/events'      eventKey = 'events'    >Events</                Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href = '/accounting'  eventKey = 'accounting'>Accounting</          Nav.Link></Nav.Item>
